@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExploreFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<!--            Search-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="27dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/ef_et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/white_curve_with_outline_et"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Search Location!"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/ef_ib_search"
+                    android:layout_width="49dp"
+                    android:layout_height="44dp"
+                    android:layout_alignTop="@+id/ef_et_search"
+                    android:layout_alignEnd="@+id/ef_et_search"
+                    android:layout_alignBottom="@+id/ef_et_search"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/search_btn"
+                    android:scaleType="fitCenter"
+                    android:translationZ="2dp" />
+            </RelativeLayout>
+
+<!--            Body-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Explore"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Properties in "
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/ef_tv_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Raipur"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ef_explore_def"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="22dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="House for sale        "
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:lineHeight="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/house_for_sale"/>
+                        <View
+                            android:layout_width="146dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginStart="10dp"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/ef_pb_house_sale_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rv_ef_house_for_sale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/rv_item" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="22dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Plots for sale           "
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:lineHeight="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/plot_for_sale"/>
+                        <View
+                            android:layout_width="146dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginStart="10dp"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/ef_pb_plot_sale_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rv_ef_plot_for_sale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/rv_item" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="22dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="House for Rent        "
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:lineHeight="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/house_for_rent"/>
+                        <View
+                            android:layout_width="146dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginStart="10dp"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/ef_pb_house_rent_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rv_ef_house_for_rent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/rv_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ef_search_res"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_ef_search_res_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="22dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Search Results        "
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:lineHeight="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
+                            />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/magnifying_glass_icon"/>
+                        <View
+                            android:layout_width="146dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginStart="10dp"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/ef_pb_search_res_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ef_rv_search_res_grid"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2"
+                        tools:listitem="@layout/rv_item" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

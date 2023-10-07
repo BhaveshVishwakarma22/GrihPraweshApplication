@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity"
+    android:background="@drawable/home_activity_bg"
+    >
+
+    <FrameLayout
+        android:id="@+id/fl_home_activity"
+        android:layout_weight="86"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow_gradient"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv_ha"
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:itemTextColor="@drawable/bottom_nav_selector"
+        app:itemRippleColor="@color/transparent"
+        app:menu="@menu/bottom_nav_menu"
+        app:backgroundTint="@color/colorWhite"
+        app:itemBackground="@color/transparent"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
+        app:labelVisibilityMode="labeled"
+        />
+
+
+</LinearLayout>

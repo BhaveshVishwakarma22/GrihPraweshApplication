@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccount"
+    android:background="@drawable/createaccount_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ea_iv_add_image"
+            android:layout_width="158dp"
+            android:layout_height="158dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/add_image_btn"
+            />
+
+        <EditText
+            android:id="@+id/ea_et_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/outline_et_blue"
+            android:hint="Enter Your First Name"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/ea_et_lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/outline_et_blue"
+            android:hint="Enter Your Last Name"
+            android:fontFamily="@font/poppins"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/ea_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/outline_et_blue"
+            android:hint="Enter Your Email"
+            android:fontFamily="@font/poppins"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/ea_et_old_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:singleLine="true"
+            android:background="@drawable/outline_et_blue"
+            android:hint="Enter Your Current Password"
+            android:fontFamily="@font/poppins"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/ea_et_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:singleLine="true"
+            android:background="@drawable/outline_et_blue"
+            android:hint="Enter Your New Password"
+            android:fontFamily="@font/poppins"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/ea_et_pno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:singleLine="true"
+            android:background="@drawable/outline_et_blue"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter Your Phone No."
+            android:inputType="number"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+
+
+        <ImageButton
+            android:id="@+id/ea_ibtn_save"
+            android:layout_width="200dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/save_btn"
+            android:scaleType="fitCenter" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

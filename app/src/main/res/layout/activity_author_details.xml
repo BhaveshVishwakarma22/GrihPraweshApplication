@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthorDetails"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/login_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Grih Pravesh"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/gray"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="100dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:elevation="15dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="100dp"
+        android:elevation="15dp"
+        android:layout_gravity="center">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/my_photo"
+        />
+
+    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created By"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="7dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author_name"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_bold"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SSIPMT (I.T.)"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="7dp"
+        android:textAlignment="center"
+        />
+
+    <ImageButton
+        android:id="@+id/ad_linkind_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linkedinlogo"
+        android:scaleType="fitCenter"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.linkedin.com/in/bhavesh-vishwakarma-a29080175"
+        android:textColor="@color/darkBlue"
+        android:textSize="10sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="7dp"
+        android:textAlignment="center"
+        />
+
+</LinearLayout>

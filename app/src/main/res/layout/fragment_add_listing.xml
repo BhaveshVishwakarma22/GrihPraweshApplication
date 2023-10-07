@@ -1,0 +1,2148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddListingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Add Listing"
+            android:textSize="30sp" />
+
+<!--    Sell Plot-->
+        <ImageButton
+            android:id="@+id/al_ib_sellPlot"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/sell_plot_btn_bw_bg"
+            android:scaleType="fitXY"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/al_sp_cl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:paddingTop="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/al_iv_sellPlot"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/sell_plog_bg_blu"
+                    android:scaleType="fitXY"/>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:padding="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="24dp"
+                                android:text="Name" />
+
+                            <EditText
+                                android:id="@+id/al_sp_et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+                            
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="21dp"
+                                android:text="Height" />
+
+                            <EditText
+                                android:id="@+id/al_sp_et_height"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="25dp"
+                                android:text="Width" />
+
+                            <EditText
+                                android:id="@+id/al_sp_et_width"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:inputType="numberDecimal"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="33dp"
+                                android:text="Area" />
+
+                            <EditText
+                                android:id="@+id/al_sp_et_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:inputType="numberDecimal"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="35dp"
+                                android:text="Cost" />
+
+                            <EditText
+                                android:id="@+id/al_sp_et_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:inputType="numberDecimal"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="Location" />
+
+                            <EditText
+                                android:id="@+id/al_sp_et_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="4">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/al_sp_cg_unit"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:singleSelection="true">
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/al_ch_foot"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Foot"
+                                    android:checked="true"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="10dp"
+                                    style="@style/CustomChipStyle"
+                                    />
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/al_sp_ch_meter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Meter"
+                                    style="@style/CustomChipStyle"
+                                    android:textSize="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    />
+
+                            </com.google.android.material.chip.ChipGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/al_sp_ib_add_img"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="30dp"
+                            android:src="@drawable/add_image_bg"
+                            />
+
+                        <Button
+                            android:id="@+id/al_btn_sp_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="20dp"
+                            android:backgroundTint="@color/yellow"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+<!--        Sell House-->
+        <ImageButton
+            android:id="@+id/al_ib_sellHouse"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/selll_house_btn_bw_bg"
+            android:scaleType="fitXY"/>
+
+
+<!--        Sell House -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/al_sh_cl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:paddingTop="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/al_iv_sellHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/sell_house_bg_blu"
+                    android:scaleType="fitXY"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:padding="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="24dp"
+                                android:text="Name" />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="21dp"
+                                android:text="Height" />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_height"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="25dp"
+                                android:text="Width" />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_width"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="33dp"
+                                android:text="Area" />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="35dp"
+                                android:text="Cost" />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="Location" />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="BHK " />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_bhk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="BR " />
+
+                            <EditText
+                                android:id="@+id/al_sh_et_br"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="4">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/al_sh_cg_unit"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:singleSelection="true">
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/al_sh_ch_foot"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Foot"
+                                    android:checked="true"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="10dp"
+                                    style="@style/CustomChipStyle"
+                                    />
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/al_sh_ch_meter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Meter"
+                                    style="@style/CustomChipStyle"
+                                    android:textSize="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    />
+
+                            </com.google.android.material.chip.ChipGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/al_sh_ib_add_img"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="30dp"
+                            android:src="@drawable/add_image_bg"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="12dp">
+<!--                    Main Property Type-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Main Property Type" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_mp_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_residental"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Residental"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_commercial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Commercial"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                    </com.google.android.material.chip.ChipGroup>
+<!--                    Property Type-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Property Type" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_p_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_apartments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apartments"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_independent_house"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Independent House"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_duplex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duplex"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_penthouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Penthouse"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_villa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Villa"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_builder_floor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Builder Floor"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Property Type-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Possesion" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_possesion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_readyToMove"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ready to move"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_oneYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Year"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_twoYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_threeYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_plThreYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+3 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+<!--                    Property Age   -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Property Age" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_p_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_ltOneYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Less than 1 year"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_mtOneYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More than 1 Year"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_mtFiveYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More than 5 years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_mtTenYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More than 10 years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_ltFiveYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Less than 5 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Property Type-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Entrance Facing" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_EntranceFacing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_North"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="North"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_South"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="South"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_East"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="East"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_West"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="West"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_NorthEast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="North-East"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_NorthWest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="North-West"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_SouthEast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="South-East"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Posted by-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Posted by" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_p_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Owner"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Builder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Builder"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Agent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agent"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+
+                    <!--                    Amenities-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Amenities" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_Amenities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="false">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Gym"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gym"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Swimming_Pool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Swimming-Pool"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_GasPipeline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gas-Pipeline"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_VisitorParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visitor Parking"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Power_Backup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Power Backup"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Security"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Security"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Garden"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Garden"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_24HoursWaterSupply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24 Hours Water supply"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_CCTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CCTV"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_ReservedParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reserved Parking"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Lift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lift"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Posted by-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Furnishing" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_sh_cg_furnishing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_FullyFurnished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fully Furnished"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_SemiFurnished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Semi Furnished"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_ch_Unfurnished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unfurnished"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <Button
+                        android:id="@+id/al_btn_sh_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/yellow"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+<!--        Rent House-->
+        <ImageButton
+            android:id="@+id/al_ib_rentHouse"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/rent_house_btn_bw_bg"
+            android:scaleType="fitXY"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/al_pr_cl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:paddingTop="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/al_iv_putRent"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/rent_house_bg_blu"
+                    android:scaleType="fitXY"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:padding="11dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="24dp"
+                                android:text="Name" />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="21dp"
+                                android:text="Height" />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_height"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="25dp"
+                                android:text="Width" />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_width"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="33dp"
+                                android:text="Area" />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="35dp"
+                                android:text="Cost" />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="Location" />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="BHK " />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_bhk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:maxLines="1"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:text="BR " />
+
+                            <EditText
+                                android:id="@+id/al_rh_et_br"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/outline_black"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="4">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/al_rh_cg_unit"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:singleSelection="true">
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/al_rh_ch_foot"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Foot"
+                                    android:checked="true"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="10dp"
+                                    style="@style/CustomChipStyle"
+                                    />
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/al_rh_ch_meter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Meter"
+                                    style="@style/CustomChipStyle"
+                                    android:textSize="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    />
+
+                            </com.google.android.material.chip.ChipGroup>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/al_rh_ib_add_img"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="30dp"
+                            android:src="@drawable/add_image_bg"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="12dp">
+                    <!--                    Main Property Type-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Main Property Type" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_mp_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_rh_residental"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Residental"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_sh_rh_commercial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Commercial"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                    </com.google.android.material.chip.ChipGroup>
+                    <!--                    Property Type-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Property Type" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_p_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_apartments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apartments"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_independent_house"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Independent House"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_duplex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duplex"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_penthouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Penthouse"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_villa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Villa"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_builder_floor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Builder Floor"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Possession-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Possesion" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_possesion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_readyToMove"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ready to move"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_oneYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Year"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_twoYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_threeYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_plThreYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+3 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Property Age   -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Property Age" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_p_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_ltOneYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Less than 1 year"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_mtOneYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More than 1 Year"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_mtFiveYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More than 5 years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_mtTenYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More than 10 years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_ltFiveYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Less than 5 Years"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Entrance Facing-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Entrance Facing" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_EntranceFacing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_North"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="North"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_South"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="South"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_East"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="East"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_West"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="West"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_NorthEast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="North-East"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_NorthWest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="North-West"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_SouthEast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="South-East"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Posted by-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Posted by" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_p_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Owner"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Builder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Builder"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Agent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agent"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+
+                    <!--                    Amenities-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Amenities" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_Amenities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="false">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Gym"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gym"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Swimming_Pool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Swimming-Pool"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_GasPipeline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gas-Pipeline"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_VisitorParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visitor Parking"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Power_Backup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Power Backup"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Security"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Security"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Garden"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Garden"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_24HoursWaterSupply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24 Hours Water supply"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_CCTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CCTV"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_ReservedParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reserved Parking"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Lift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lift"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!--                    Furnishing-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:text="Furnishing" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/al_rh_cg_furnishing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_FullyFurnished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fully Furnished"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="10dp"
+                            style="@style/CustomChipStyle2"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_SemiFurnished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Semi Furnished"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/al_rh_ch_Unfurnished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unfurnished"
+                            style="@style/CustomChipStyle2"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <Button
+                        android:id="@+id/al_btn_rh_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/yellow"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ProgressBar
+            android:id="@+id/al_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "743103975042",
+    "project_id": "grihprawesh-e0a3c",
+    "storage_bucket": "grihprawesh-e0a3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743103975042:android:8de67af17b21a83a2dee9b",
+        "android_client_info": {
+          "package_name": "com.example.grihprawesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743103975042-5q8831j34onfn6230g5ngub5r6q723qt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdSGXem7aIaZOizTbgb4lgbQfG5DfpbCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743103975042-5q8831j34onfn6230g5ngub5r6q723qt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
